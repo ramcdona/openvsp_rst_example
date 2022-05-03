@@ -11,7 +11,8 @@ geom_id = all_geoms[0]
 # Create a grid of test points in rst for wing
 nr = 25
 ns = 5
-r_array = np.linspace(0.0, 1.0, nr)
+small = .01
+r_array = np.linspace(0.25+small, 0.75-small, nr)
 s_array = np.linspace(0.0, 0.5, ns)
 rst0 = np.zeros([nr, ns, 3])
 rst0[:, :, 0], rst0[:, :, 1] = np.meshgrid(r_array, s_array, indexing='ij')
